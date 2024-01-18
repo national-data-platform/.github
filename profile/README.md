@@ -23,9 +23,6 @@ To start working with NDP, new contributors must register by clicking on the *Lo
 There are 2 ways in which contributors can register to NDP:
 
 1. Clicking on the *Register* link on the bottom of the log in window, and setting up the credentials.
-
-<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/keycloac_register.png?raw=true">
-
 2. For users with academic credentials, it is recommended to access via [*CI Logon*](https://www.cilogon.org/), by clicking on the *CI Logon* button of the log in window. This will redirect to the *CI Logon* log in page, in which contributors can search for their institution, and access through ther institutional log in.
 
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/ci_logon.png?raw=true">
