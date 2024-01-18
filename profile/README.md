@@ -14,18 +14,34 @@ NDP is a federated and extensible data ecosystem to promote collaboration, innov
 
 NDP serves as an open-access platform with the goal of reducing barriers to data and technology access, especially for individuals lacking expertise or resources in the field of AI. The platform is designed to cater to both the scientific and academic communities, as well as non-experts interested in exploring AI training. By fostering inclusivity in its user base, NDP aims to enhance the significance of existing data repositories, contributing to advancements in science, societal well-being, and education.
 
+## Registration
+
+To start working with NDP, new contributors must register by clicking on the *Log in/Register* in the top right of the NDP's home page. 
+
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/ndp_landing.png?raw=true">
+
+There are 2 ways in which contributors can register to NDP:
+
+1. Clicking on the *Register* link on the bottom of the log in window, and setting up the credentials.
+
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/keycloac_register.png?raw=true">
+
+2. For users with academic credentials, it is recommended to access via [*CI Logon*](https://www.cilogon.org/), by clicking on the *CI Logon* button of the log in window. This will redirect to the *CI Logon* log in page, in which contributors can search for their institution, and access through ther institutional log in.
+
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/ci_logon.png?raw=true">
+
 ## Catalog
 
 One of the main features of NDP is the extensive data catalog,  which encompasses a variety of resources such as datasets, streaming data, and open knowledge networks spanning diverse scientific domains. This comprehensive catalog is further enriched by collaboration with various organizations and researchers that contribute to making data accessible through the registration service. This accessibility empowers researchers and learners to engage with the data, fostering the development of innovative analysis, modeling techniques, and applications.
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-12%20125934.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/catalog_landing.png?raw=true">
 
 Data location is facilitated through the incorporation of a search engine. As a starting point, we can type *Uniform Fuels* into the search engine, corresponding to the data utilized for the demonstration project. Once the dataset is identified, clicking on *View More* will open a window with the following information:
 
 - A comprehensive description detailing the content of the dataset.
 - A list of all supplementary files along with metadata information.
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-11%20215429.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/catalog_viewmore.png?raw=true">
 
 ## Launching Computing Resources
 
@@ -33,11 +49,11 @@ NDP allows users to explore and work on data by facilitating access to the NSF's
 
 To connect with Nautilus and launch a computational instance, we will start by clicking at the JupyterHub button attached to our dataset, which will redirect us to the JupyterHub environment. 
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-09%20211402.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterhub_keycloac.png?raw=true">
 
 After accessing the environment, we can log in to our designated user space using either our username credentials or, in the case of members of institutions with federated access to NSF's infrastructure, by utilizing institutional credentials via  [CI Logon](https://www.cilogon.org/). Once you log in, you will be redirected to the main site for resources reservation:
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-11%20182754.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterhub_resources.png?raw=true">
 
 One of the main features of NDP is the provision of an user friendly interface which facilitates the creation of a pod. After providing the required specifications, the cluster (which works under the [Kubernetes](https://kubernetes.io/) system) orchestrates the creation of a pod, which operates on the allocated hardware resources such as CPU cores, GPUs, and memory. The pod encapsulates the applications contained in the provisioned images, leveraging the specified hardware. Additionally, the cluster associates a 50GB persistent volume (PV) with the pod, ensuring that the work that we develop is seamlessly stored and persists across various sessions. 
 
@@ -57,13 +73,13 @@ The final aspect of our resource allocation involves selecting the processor arc
 
 Once our server starts running, we will be redirected to JupyterLab, with our persisted workspace, which in this case includes the folder with our project. In this case, our workspace has set up the working files for our example: 
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-15%20132537.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterlab_landing.png?raw=true">
 
 ## Performing our Analysis
 
 We are going to execute the two notebooks provided in the example. The first one that we are going to open, is *pgml_eda.ipynb*. This notebook provides a simple exploratory data analysis over the Uniform Fuels QUIC-Fire simulation data. You can either run cell by cell, or go to the *Run* window in JupyteLab and select *Run All Cells*. The exploratory analysis takes the multiple prescribed fire simulations provided in the dataset, and highlights the evolution of one of the features (fuel moisture) defined under different conditions (wind speed, wind direction, surface moisture). 
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-15%20172040.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/eda_graphs.png?raw=true">
 
 More details can be found in the notebook.
 
@@ -71,38 +87,38 @@ The second notebook, contains code that performs a model training, leveraging on
 
 1. Load the relevant libraries and sets up de directories to store our results.
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-15%20175155.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/quicfire_imports.png?raw=true">
 
 2. Set up the experiment, with the relevant metrics and parameters.
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-15%20180731.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/quicfire_parameters.png?raw=true">
 
 3. Start an experiment session in [MLflow](https://mlflow.org/) to save our model specifications and results.
 
 To facilitate the tracking and history of our training sessions, another important feature of NDP is the integration with [MLflow](https://mlflow.org/). This integration enables the logging of various training iterations, saving each generated model, along with key hyperparameters, specified metrics and relevant visualitazionts. All this information can be consulted through the MLflow [dashboard](https://ndp.sdsc.edu/mlflow). In the following, you will see on the left side, the different experiments we have 
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-15%20173255.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/mlflow_experiments.png?raw=true">
 
 By clicking on the name of the run, we can see the information that we saved for our experiment:
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-15%20174233.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/mlflow_metrics.png?raw=true">
 
 4. Perform the training and testing of the model.
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-15%20183823.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/quicfire_training.png?raw=true">
 
 5. Produce the model and output images to store in the results directory.
 
 
 6. Send the final products to MLflow.
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-15%20184846.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/quicfire_savemodel.png?raw=true">
 
 **NOTE:** If decided to run the notebook, take into consideration that the full training under the hardware specifications defined previously might take up to three hours.
 
 After finishing our work in JupyterLab, it is important to stop our server. To do this, go to the *File* window in JupyterLab and select *Hub Control Panel*. This will redirect you to JupyterHub and display your running servers (in case you have more than one). Click on *Stop My Server* to stop the current server.
 
-<img src="https://github.com/pramonettivega/images/blob/main/Screenshot%202024-01-16%20103042.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterhub_stopserver.png?raw=true">
 
 ## Supporting Documents
 
@@ -111,6 +127,6 @@ After finishing our work in JupyterLab, it is important to stop our server. To d
   
 ## Closing Note 
 
-This tutorial is part of the BETA version of NDP, and as such, it may contain some imperfections or errors. We welcome all valuable feedback to assist us in refining the content, enhancing the structure, and improving overall clarity.
+This tutorial is part of the ALPHA.1 version of NDP, and as such, it may contain some imperfections or errors. We welcome all valuable feedback to assist us in refining the content, enhancing the structure, and improving overall clarity.
 
 Contact: pramonettivega@ucsd.edu
