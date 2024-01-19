@@ -124,6 +124,6 @@ After finishing our work in JupyterLab, it is important to stop our server. To d
   
 ## Closing Note 
 
-This tutorial is part of the ALPHA.1 version of NDP, and as such, it may contain some imperfections or errors. We welcome all valuable feedback to assist us in refining the content, enhancing the structure, and improving overall clarity.
+This tutorial is part of the v0.1 alpha version of NDP, and as such, it may contain some misleading instructions or errors. We welcome all valuable feedback to assist us in refining the content, enhancing the structure, and improving overall clarity.
 
-Contact: pramonettivega@ucsd.edu
+If you've spotted any glitches, bugs, or unexpected behaviors, kindly use this [issue reporting form](https://docs.google.com/forms/d/e/1FAIpQLSfzjlc0Sw2fTFTKArOZ0ffKNdVcPivf218kLXkBKfobGPbDMw/viewform) to contact us.
