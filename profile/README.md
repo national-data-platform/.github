@@ -22,14 +22,16 @@ To start working with NDP, new contributors must register by clicking on the *Lo
 
 There are 2 ways in which contributors can register to NDP:
 
-1. Clicking on the *Register* link on the bottom of the log in window, and setting up the credentials.
-2. For users with academic credentials, it is recommended to access via [*CI Logon*](https://www.cilogon.org/), by clicking on the *CI Logon* button of the log in window. This will redirect to the *CI Logon* log in page, in which contributors can search for their institution, and access through ther institutional log in.
+1. Clicking on the *Register* link on the bottom of the log in window, and setting up the credentials. Take into consideration that registering with a commercial email account (i.e. Google, Outlook, Yahoo) will not provide access to JupyterHub nor any computing service.
+2. For users with institutional credentials, it is recommended to access via [*CI Logon*](https://www.cilogon.org/), by clicking on the *CI Logon* button of the log in window. This will redirect to the *CI Logon* log in page, in which contributors can search for their institution, and access through ther institutional log in.
 
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/ci_logon.png?raw=true">
 
-## Catalog
+Once registered, the user will be redirected to the user dashboard, with the most recent updates and news around NDP.
 
-One of the main features of NDP is the extensive data catalog,  which encompasses a variety of resources such as datasets, streaming data, and open knowledge networks spanning diverse scientific domains. This comprehensive catalog is further enriched by collaboration with various organizations and researchers that contribute to making data accessible through the registration service. This accessibility empowers researchers and learners to engage with the data, fostering the development of innovative analysis, modeling techniques, and applications.
+## Data Catalog
+
+One of the main features of NDP is the extensive data catalog,  which encompasses a variety of datasets and data streams spanning diverse scientific domains. This comprehensive catalog is further enriched by collaboration with various organizations and researchers that contribute to making data accessible through the registration service. This accessibility empowers researchers and learners to engage with the data, fostering the development of innovative analysis, modeling techniques, and applications.
 
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/catalog_landing.png?raw=true">
 
@@ -37,27 +39,45 @@ A list and description of the contributing organizations can be displayed by cli
 
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/contributing_organizations.png?raw=true">
 
-Data location is facilitated through the incorporation of a search engine. As a starting point, we can type *Uniform* into the search engine, to retrieve the data utilized for the demonstration project. Once the dataset is identified, clicking on *View More* will open a window with the following information:
+Data location is facilitated through the incorporation of a search engine. There are two types of search the user can perform within data catalog:
+
+- Substring search: This will return a list of datasets with the corresponding substring identified within the file name or the metadata. 
+- Annotated search: This will return a list of datasets with corresponding annotation, along with a series of statistics related to the matches of the term within the available Open Knowledge Networks.
+
+Plus, users can also filter their results by the contributing organization.
+
+As a starting point, we can type *Uniform* into the search engine, to locate the `Uniform Fuels QUIC-Fire Simulation Runs Ensemble` file, which is the data used for the demon project. Once the dataset is identified, clicking on *View More* will open a window with the following information:
 
 - A comprehensive description detailing the content of the dataset.
 - A list of all supplementary files along with metadata information.
 
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/catalog_viewmore.png?raw=true">
 
+Another feature is the incorporation of visualization tools for certain data formats. For example, you can search GrandCanyon and click on *View More* for the `AZ_GrandCanyonNP_1_2019` file. You will see both a Potree visualization and a GeoJSON viewer for this Lidar scan.
+
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/grand_canyon.png?raw=true">
+
+## OKN Catalog
+
+The Open Knowledge Network catalog features the collection of Open Knowledge Networks available through NDP. These OKN's are meant to be a resource for the development of NDP services, such as data annotation and LLM training.
+
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/okn_catalog.png?raw=true">
+
+## Services Catalog
+
+The services catalog the current and upcoming services within NDP
+
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/services_catalog.png?raw=true">
 
 ## Launching Computing Resources
 
-NDP allows users to explore and work on data by facilitating access to the NSF's cyberinfrastructure (CI) capabilities. For the case of our demonstration dataset, we are going to connect with [Nautilus](https://nationalresearchplatform.org/nautilus/), a hypercluster which facilitates the work with Big Data through [containarized](https://en.wikipedia.org/wiki/Containerization_(computing)) applications. 
+NDP allows users to explore and work on data by facilitating access to the NSF's cyberinfrastructure (CI) capabilities. For the case of our demonstration dataset, we are going to connect with [Nautilus](https://nationalresearchplatform.org/nautilus/).
 
-To connect with Nautilus and launch a computational instance, we will start by clicking at the JupyterHub button attached to our dataset, which will redirect us to the JupyterHub environment. 
-
-<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterhub_keycloac.png?raw=true">
-
-After accessing the environment, we can log in to our designated user space using either our username credentials or, in the case of members of institutions with federated access to NSF's infrastructure, by utilizing institutional credentials via  [CI Logon](https://www.cilogon.org/). Once you log in, you will be redirected to the main site for resources reservation:
+To connect with Nautilus and launch a computational instance, we will start by clicking at the JupyterHub button attached to our dataset, which will redirect us to the JupyterHub environment. To access it, you must provide institutional credentials via  [CI Logon](https://www.cilogon.org/). Once you log in, you will be redirected to the main site for resources reservation:
 
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterhub_resources.png?raw=true">
 
-One of the main features of NDP is the provision of an user friendly interface which facilitates the creation of a pod. After providing the required specifications, the cluster (which works under the [Kubernetes](https://kubernetes.io/) system) orchestrates the creation of a pod, which operates on the allocated hardware resources such as CPU cores, GPUs, and memory. The pod encapsulates the applications contained in the provisioned images, leveraging the specified hardware. Additionally, the cluster associates a 50GB persistent volume (PV) with the pod, ensuring that the work that we develop is seamlessly stored and persists across various sessions. 
+One of the main features of NDP is the provision of an user friendly interface which facilitates the creation of a pod. After providing the required specifications, the cluster (which works under the [Kubernetes](https://kubernetes.io/) system) orchestrates the creation of a pod, which operates on the allocated hardware resources such as CPU cores, GPUs, and memory. The pod encapsulates the applications contained in the provisioned images, leveraging the specified hardware. Additionally, the server associates a 100GB persistent volume (PV) with the pod, ensuring that the work that we develop is seamlessly stored and persists across various sessions. The persistent volume is identified within the server as the `data` folder. 
 
 To initiate the creation of a pod, we begin by specifying the location, amount, and type of hardware (for the case of GPU). It's important to bear in mind that augmenting the quantity and intricacy of these resources can lead to an extended allocation waiting time. For real-time updates on the availability of resources, we can refer to the [Available Resources Page](https://portal.nrp-nautilus.io/resources). For the purposes of this tutorial, we set up the following specifications:
 
@@ -79,13 +99,13 @@ Once our server starts running, we will be redirected to JupyterLab, with our pe
 
 ## Performing our Analysis
 
-We are going to execute the two notebooks provided in the example. The first one that we are going to open, is *pgml_eda.ipynb*. This notebook provides a simple exploratory data analysis over the Uniform Fuels QUIC-Fire simulation data. You can either run cell by cell, or go to the *Run* window in JupyteLab and select *Run All Cells*. The exploratory analysis takes the multiple prescribed fire simulations provided in the dataset, and highlights the evolution of one of the features (fuel moisture) defined under different conditions (wind speed, wind direction, surface moisture). 
+We are going to execute the two notebooks provided in the example. The first one that we are going to open, is `NDP_PGML_EDA.ipynb`. This notebook provides a simple exploratory data analysis over the `Uniform Fuels QUIC-Fire` simulation data. The exploratory analysis takes the multiple prescribed fire simulations provided in the dataset, and highlights the evolution of one of the features (fuel moisture) defined under different conditions (wind speed, wind direction, surface moisture). 
 
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/eda_graphs.png?raw=true">
 
 More details can be found in the notebook.
 
-The second notebook, contains code that performs a model training, leveraging on predefined classes that you can explore on the *unet* directory. Running the notebook will perform the following tasks:
+The second notebook `NDP_PGML_UNet.ipynb`, contains code to train a model, leveraging on predefined classes that you can explore on the *unet* directory. Running the notebook will perform the following tasks:
 
 1. Load the relevant libraries and sets up de directories to store our results.
 
@@ -97,7 +117,7 @@ The second notebook, contains code that performs a model training, leveraging on
 
 3. Start an experiment session in [MLflow](https://mlflow.org/) to save our model specifications and results.
 
-To facilitate the tracking and history of our training sessions, another important feature of NDP is the integration with [MLflow](https://mlflow.org/). This integration enables the logging of various training iterations, saving each generated model, along with key hyperparameters, specified metrics and relevant visualitazionts. All this information can be consulted through the MLflow [dashboard](https://ndp.sdsc.edu/mlflow). In the following, you will see on the left side, the different experiments we have 
+To facilitate the tracking and history of our training sessions, another important feature of NDP is the integration with [MLflow](https://mlflow.org/). This integration enables the logging of various training iterations, saving each generated model, along with key hyperparameters, specified metrics and relevant visualitazionts. All this information can be consulted through the MLflow [dashboard](https://ndp.sdsc.edu/mlflow). In the following image, you will see on the left side the different experiments we have previously executed.
 
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/mlflow_experiments.png?raw=true">
 
@@ -110,7 +130,6 @@ By clicking on the name of the run, we can see the information that we saved for
 <img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/quicfire_training.png?raw=true">
 
 5. Produce the model and output images to store in the results directory.
-
 
 6. Send the final products to MLflow.
 
