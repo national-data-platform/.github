@@ -33,7 +33,7 @@ Once registered, the user will be redirected to the user dashboard, with the mos
 
 One of the main features of NDP is the extensive data catalog,  which encompasses a variety of datasets and data streams spanning diverse scientific domains. This comprehensive catalog is further enriched by collaboration with various organizations and researchers that contribute to making data accessible through the registration service. This accessibility empowers researchers and learners to engage with the data, fostering the development of innovative analysis, modeling techniques, and applications.
 
-<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/catalog_landing.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/catalog_landing.PNG?raw=true">
 
 A list and description of the contributing organizations can be displayed by clicking on *View Contributing Organizations*.
 
@@ -95,7 +95,7 @@ The final aspect of our resource allocation involves selecting the processor arc
 
 Once our server starts running, we will be redirected to JupyterLab, with our persisted workspace, which in this case includes the folder with our project. In this case, our workspace has set up the working files for our example: 
 
-<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterlab_landing.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterlab_landing.PNG?raw=true">
 
 ## Performing our Analysis
 
@@ -139,7 +139,7 @@ By clicking on the name of the run, we can see the information that we saved for
 
 After finishing our work in JupyterLab, it is important to stop our server. To do this, go to the *File* window in JupyterLab and select *Hub Control Panel*. This will redirect you to JupyterHub and display your running servers (in case you have more than one). Click on *Stop My Server* to stop the current server.
 
-<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterhub_stopserver.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/jupyterhub_stopserver.PNG?raw=true">
 
 ## Supporting Documents
 
