@@ -55,13 +55,13 @@ As a starting point, we can type *Uniform* into the search engine, to locate the
 
 Another feature is the incorporation of visualization tools for certain data formats. For example, you can search GrandCanyon and click on *View More* for the `AZ_GrandCanyonNP_1_2019` file. You will see both a Potree visualization and a GeoJSON viewer for this Lidar scan.
 
-<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/grand_canyon.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/grand_canyon.PNG?raw=true">
 
 ## OKN Catalog
 
 The Open Knowledge Network catalog features the collection of Open Knowledge Networks available through NDP. These OKN's are meant to be a resource for the development of NDP services, such as data annotation and LLM training.
 
-<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/okn_catalog.png?raw=true">
+<img src="https://github.com/national-data-platform/.github/blob/main/profile/screenshots/okn_catalog.PNG?raw=true">
 
 ## Services Catalog
 
